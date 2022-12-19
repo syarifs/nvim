@@ -1,6 +1,6 @@
-local setup = require('utils').plugins
+local setup = require("utils").plugins
 
-setup('nvim_comment')
+setup("nvim_comment")
 -- setup('which-key')
-setup('neoscroll')
-setup('trouble')
+setup("neoscroll")
+setup("trouble")

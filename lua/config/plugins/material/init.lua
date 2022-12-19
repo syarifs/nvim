@@ -4,12 +4,7 @@ vim.g.material_style = "deep ocean"
 
 setup("material", {
 		contrast = {
-				popup_menu = true
-		},
-		italics = {
-				functions = true,
-				comments = true,
-				variables = true,
+				floating_windows = true
 		},
 		high_visibility = {
 				darker = true,

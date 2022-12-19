@@ -1,1 +1,1 @@
-setlocal tabstop=2 shiftwidth=4 softtabstop=2
+setlocal tabstop=4 shiftwidth=4 softtabstop=0 noexpandtab

@@ -1,10 +1,10 @@
-local setup = require('utils').lsp
+local setup = require("utils").lsp
 
-setup('pyright', {
-		python = {
-				analysis = {
-						diagnosticMode = 'workspace',
-						useLibraryCodeForTypes = true
-				}
-		}
+setup("pyright", {
+	python = {
+		analysis = {
+			diagnosticMode = "workspace",
+			useLibraryCodeForTypes = true,
+		},
+	},
 })
