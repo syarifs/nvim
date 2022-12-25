@@ -25,13 +25,6 @@ local M = {
 	{ "wo", "relativenumber", true },
 	{ "wo", "cursorline", true },
 
-	-- ultisnips
-	{ "g", "UltiSnipsExpandTrigger", "<Plug>(ultisnips_expand)" },
-	{ "g", "UltiSnipsJumpForwardTrigger", "<Plug>(ultisnips_jump_forward)," },
-	{ "g", "UltiSnipsJumpBackwardTrigger", "<Plug>(ultisnips_jump_backward)" },
-	{ "g", "UltiSnipsListSnippets", "<c-x><c-s>" },
-	{ "g", "UltiSnipsRemoveSelectModeMappings", "0" },
-
 	-- blame line
 	{ "o", "updatetime", 300 },
 	{ "o", "incsearch", false },
