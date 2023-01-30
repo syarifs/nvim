@@ -21,9 +21,18 @@ local M = {
 	{ "o", "scrolloff", 8 },
 	{ "o", "sidescrolloff", 8 },
 	{ "o", "scrollback", 8 },
+	{ "o", "foldcolumn", "1" },
+	{ "o", "foldlevelstart", -1 },
+	{ "o", "foldlevel", 99 },
+	{ "o", "foldenable", true },
+	{ "o", "foldmethod", "expr" },
+	{ "o", "fillchars", [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]] },
+	{ "o", "foldexpr", "nvim_treesitter#foldexpr()" },
 	{ "wo", "number", true },
 	{ "wo", "relativenumber", true },
 	{ "wo", "cursorline", true },
+
+	{ "g", "did_load_filetypes", true },
 
 	-- blame line
 	{ "o", "updatetime", 300 },

@@ -1,9 +1,9 @@
 local cmd = vim.cmd
-local autocmd = require('utils').autocmd
-local opt = require('utils').options
-local vim_settings = require('config.vim.settings')
+local autocmd = require("utils").autocmd
+local opt = require("utils").options
+local vim_settings = require("config.vim.settings")
 
-cmd "filetype plugin indent on"
+cmd("filetype plugin indent on")
 
 vim.api.nvim_exec(
 	[[
@@ -14,10 +14,11 @@ vim.api.nvim_exec(
 	false
 )
 
-autocmd('BufEnter', 'NvimTree*', 'setlocal statusline=%!DisableST()')
+autocmd("BufEnter", "NvimTree*", "setlocal statusline=%!DisableST()")
+autocmd("TermOpen", "*", "setlocal nonumber norelativenumber")
 
-autocmd('VimEnter', '*', '!xmodmap -e "clear lock" -e "keycode 0x42 = Escape"')
-autocmd('VimLeave', '*', '!xmodmap -e "clear lock" -e "keycode 0x42 = Caps_Lock" ')
+autocmd("VimEnter", "*", '!xmodmap -e "clear lock" -e "keycode 0x42 = Escape"')
+autocmd("VimLeave", "*", '!xmodmap -e "clear lock" -e "keycode 0x42 = Caps_Lock" ')
 
 for _, value in ipairs(vim_settings) do
 	opt(value[1], value[2], value[3])

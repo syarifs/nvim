@@ -8,4 +8,5 @@ setup("cssls", {
 })
 setup("html", {
 	cmd = { "vscode-html-languageserver", "--stdio" },
+	filetypes = { "html", "blade" },
 })

@@ -2,43 +2,32 @@ local map = require("utils").map
 
 map("", "<A-f>", ":NvimTreeToggle<CR>", { silent = true, noremap = false })
 map("", "<A-r>", ":NvimTreeRefresh<CR>", { silent = true, noremap = false })
-map("", "<A-F>", ":NvimTreeFindFile<CR>", { silent = true, noremap = false })
+map("", "<A-c>", ":NvimTreeCollapse<CR>", { silent = true, noremap = false })
 
 -- Copy Pasta (xclip required)
 map("v", "cc", '"+y')
 map("v", "cv", '"+p')
 map("n", "cv", '"+p')
 
--- Center Cursor
-map("n", "j", "jzz")
-map("n", "k", "kzz")
-
 -- Buffer
-map("n", "q", ":bdelete<CR>")
-map("n", "<A-q>", ":qa<CR>")
+map("n", "<S-q>", ":bdelete<CR>")
 map("n", "<S-h>", ":bprev<CR>")
 map("n", "<S-l>", ":bnext<CR>")
 
 map("n", "<F8>", ":TagbarToggle<CR>")
 
-map("n", "<S-t>", ":split | resize 20 | term<CR>")
-
 -- Save
-map("n", "s", ":write<CR>")
-
--- Undo Redo
-map("n", "u", ":undo<CR>")
-map("n", "z", ":redo<CR>")
+map("n", "<C-s>", ":write<CR>")
 
 -- Better Indentation Key
 map("v", "<Tab>", ">", { noremap = false, silent = true })
 map("v", "<S-Tab>", "<", { noremap = false, silent = true })
 
 -- Move Window
-map("n", "<A-h>", "<C-w>h")
-map("n", "<A-l>", "<C-w>l")
-map("n", "<A-k>", "<C-w>k")
-map("n", "<A-j>", "<C-w>j")
+map("n", "<C-h>", "<C-w>h")
+map("n", "<C-l>", "<C-w>l")
+map("n", "<C-k>", "<C-w>k")
+map("n", "<C-j>", "<C-w>j")
 
 -- Comment Line
 map("n", "<A-/>", ":CommentToggle<CR>")
@@ -50,3 +39,11 @@ map("n", "fg", ":Telescope live_grep<cr>")
 map("n", "ft", ":Telescope help_tags<cr>")
 map("n", "fm", ":Telescope media_files<cr>")
 map("n", "fa", ":Telescope lsp_code_action<cr>")
+
+-- Fold
+map("n", "<A-h>", ":foldclose<cr>")
+map("n", "<A-l>", ":foldopen<cr>")
+
+-- Terminal
+map("n", "t", ":ToggleTerm direction=float<cr>")
+map("t", "<Esc>", " <C-\\><C-n> :quit<cr>")

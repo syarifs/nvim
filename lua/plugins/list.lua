@@ -1,7 +1,6 @@
 local M = {
 	-- { "savq/paq-nvim" },
 	{ "wbthomason/packer.nvim" },
-	{ "rktjmp/hotpot.nvim" },
 
 	-- LSP
 	{ "neovim/nvim-lspconfig" },
@@ -16,6 +15,9 @@ local M = {
 	-- Prettier
 	{ "jose-elias-alvarez/null-ls.nvim" },
 	{ "MunifTanjim/prettier.nvim" },
+
+	-- Progress Loading
+	{ "j-hui/fidget.nvim" },
 
 	-- Database Support
 	{ "tpope/vim-dadbod" },
@@ -62,8 +64,6 @@ local M = {
 	{ "kyazdani42/nvim-web-devicons" },
 	{ "kyazdani42/nvim-tree.lua" },
 
-	{ "rking/ag.vim" },
-
 	-- Matlab Support
 	{ "jvirtanen/vim-octave" },
 
@@ -73,6 +73,8 @@ local M = {
 	-- pair
 	{ "jiangmiao/auto-pairs" },
 	{ "alvan/vim-closetag" },
+	{ "windwp/nvim-ts-autotag" },
+	{ "p00f/nvim-ts-rainbow" },
 
 	-- Shortcut Helper
 	{ "folke/which-key.nvim" },
@@ -85,11 +87,19 @@ local M = {
 	{ "iamcco/markdown-preview.nvim" },
 	{ "rderik/vim-markdown-toc" },
 
+	-- Pretty Fold
+	{ "kevinhwang91/promise-async" },
+	{ "kevinhwang91/nvim-ufo" },
+
 	-- Laravel
 	{ "jwalton512/vim-blade" },
 
 	-- Pretty Diagnostic
 	{ "folke/trouble.nvim" },
+
+	-- Other
+	{ "rking/ag.vim" },
+	{ "akinsho/toggleterm.nvim" },
 }
 
 return M

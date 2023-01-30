@@ -1,14 +1,14 @@
-local setup = require('utils').plugins
+local setup = require("utils").plugins
 
-setup('bufferline', {
+setup("bufferline", {
 	options = {
 		offsets = {
 			{
 				filetype = "NvimTree",
 				text = "File Explorer",
 				highlight = "Directory",
-				text_align = "left"
-			}
+				text_align = "left",
+			},
 		},
 		numbers = "ordinal",
 		close_command = "bdelete! %d",
@@ -19,14 +19,14 @@ setup('bufferline', {
 			icon = "▎",
 			style = "underline",
 		},
-		buffer_close_icon = '',
-		modified_icon = '●',
-		close_icon = '',
-		left_trunc_marker = '',
-		right_trunc_marker = '',
+		buffer_close_icon = "",
+		modified_icon = "●",
+		close_icon = "",
+		left_trunc_marker = "",
+		right_trunc_marker = "",
 		name_formatter = function(buf)
-			if buf.name:match('%.md') then
-				return vim.fn.fnamemodify(buf.name, ':t:r')
+			if buf.name:match("%.md") then
+				return vim.fn.fnamemodify(buf.name, ":t:r")
 			end
 		end,
 		max_name_length = 18,
@@ -34,11 +34,10 @@ setup('bufferline', {
 		tab_size = 18,
 		diagnostics = "nvim_lsp",
 		diagnostics_update_in_insert = false,
-		diagnostics_indicator = function(count, level, diagnostics_dict, context)
+		diagnostics_indicator = function(_, _, diagnostics_dict, _)
 			local s = " "
 			for e, n in pairs(diagnostics_dict) do
-				local sym = e == "error" and " "
-					 or (e == "warning" and " " or "")
+				local sym = e == "error" and " " or (e == "warning" and " " or "")
 				s = s .. n .. sym
 			end
 			return s
@@ -61,6 +60,6 @@ setup('bufferline', {
 		persist_buffer_sort = true,
 		enforce_regular_tabs = true,
 		always_show_bufferline = true,
-		sort_by = 'id'
-	}
+		sort_by = "id",
+	},
 })

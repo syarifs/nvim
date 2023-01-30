@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/csv.vim",
     url = "https://github.com/chrisbra/csv.vim"
   },
+  ["fidget.nvim"] = {
+    loaded = true,
+    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/fidget.nvim",
+    url = "https://github.com/j-hui/fidget.nvim"
+  },
   ["filetype.nvim"] = {
     loaded = true,
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/filetype.nvim",
@@ -138,11 +143,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
-  },
-  ["hotpot.nvim"] = {
-    loaded = true,
-    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/hotpot.nvim",
-    url = "https://github.com/rktjmp/hotpot.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -204,6 +204,21 @@ _G.packer_plugins = {
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
+  },
+  ["nvim-ts-rainbow"] = {
+    loaded = true,
+    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
+    url = "https://github.com/p00f/nvim-ts-rainbow"
+  },
+  ["nvim-ufo"] = {
+    loaded = true,
+    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/nvim-ufo",
+    url = "https://github.com/kevinhwang91/nvim-ufo"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -229,6 +244,11 @@ _G.packer_plugins = {
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
   },
+  ["promise-async"] = {
+    loaded = true,
+    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/promise-async",
+    url = "https://github.com/kevinhwang91/promise-async"
+  },
   ["rest.nvim"] = {
     loaded = true,
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/rest.nvim",
@@ -248,6 +268,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,

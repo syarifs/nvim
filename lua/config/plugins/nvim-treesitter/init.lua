@@ -1,5 +1,7 @@
 local setup = require("utils").plugins
 
+require("nvim-treesitter.parsers").filetype_to_parsername.blade = "php"
+
 setup("nvim-treesitter.configs", {
 	highlight = {
 		enable = true,
@@ -9,6 +11,7 @@ setup("nvim-treesitter.configs", {
 	},
 	autotag = {
 		enable = true,
+		filetypes = { "html", "xml", "blade" },
 	},
 	rainbow = {
 		enable = true,

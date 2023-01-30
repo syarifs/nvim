@@ -8,11 +8,7 @@ configs.blade = {
 		-- Path to the executable: laravel-dev-generators
 		cmd = { "laravel-dev-tools", "lsp" },
 		filetypes = { "blade" },
-		root_dir = function(fname)
-			local cwd = vim.loop.cwd()
-			local root = util.root_pattern("composer.json", ".git")(fname)
-			return util.path.is_descendant(root, cwd) and cwd or root
-		end,
+		root_dir = util.root_pattern("composer.json", ".git"),
 		settings = {},
 	},
 }
