@@ -9,15 +9,17 @@ map("v", "cc", '"+y')
 map("v", "cv", '"+p')
 map("n", "cv", '"+p')
 
+map("", "<S-q>", "q")
+
 -- Buffer
-map("n", "<S-q>", ":bdelete<CR>")
+map("n", "q", ":bdelete<CR>")
 map("n", "<S-h>", ":bprev<CR>")
 map("n", "<S-l>", ":bnext<CR>")
 
 map("n", "<F8>", ":TagbarToggle<CR>")
 
 -- Save
-map("n", "<C-s>", ":write<CR>")
+map("n", "s", ":write<CR>")
 
 -- Better Indentation Key
 map("v", "<Tab>", ">", { noremap = false, silent = true })
