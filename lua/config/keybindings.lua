@@ -25,12 +25,6 @@ map("n", "s", ":write<CR>")
 map("v", "<Tab>", ">", { noremap = false, silent = true })
 map("v", "<S-Tab>", "<", { noremap = false, silent = true })
 
--- Move Window
-map("n", "<C-h>", "<C-w>h")
-map("n", "<C-l>", "<C-w>l")
-map("n", "<C-k>", "<C-w>k")
-map("n", "<C-j>", "<C-w>j")
-
 -- Comment Line
 map("n", "<A-/>", ":CommentToggle<CR>")
 map("v", "<A-/>", ":CommentToggle<CR>")

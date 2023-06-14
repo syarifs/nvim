@@ -100,6 +100,9 @@ local M = {
 	-- Other
 	{ "rking/ag.vim" },
 	{ "akinsho/toggleterm.nvim" },
+
+	-- Live Server
+	{ "barrett-ruth/live-server.nvim", setup = "yarn global add live-server" },
 }
 
 return M

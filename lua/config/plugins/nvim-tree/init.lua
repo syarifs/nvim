@@ -7,9 +7,6 @@ local height = 130
 setup("nvim-tree", {
 	disable_netrw = false,
 	hijack_netrw = true,
-	open_on_setup = true,
-	ignore_buffer_on_setup = false,
-	ignore_ft_on_setup = {},
 	auto_reload_on_write = true,
 	open_on_tab = true,
 	hijack_cursor = false,
@@ -44,7 +41,6 @@ setup("nvim-tree", {
 		timeout = 500,
 	},
 	view = {
-		hide_root_folder = true,
 		width = width,
 		side = "center",
 		preserve_window_proportions = true,

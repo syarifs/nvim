@@ -1,6 +1,6 @@
 local setup = require("utils").plugins
 
-require("nvim-treesitter.parsers").filetype_to_parsername.blade = "php"
+vim.treesitter.language.register("blade", "php")
 
 setup("nvim-treesitter.configs", {
 	highlight = {

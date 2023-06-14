@@ -15,6 +15,8 @@ local function add(lib)
 	end
 end
 
+table.insert(library, "${3rd}/luv/library")
+
 -- add runtime
 add("$VIMRUNTIME")
 
@@ -26,7 +28,7 @@ add("~/.config/nvim")
 add("~/.local/share/nvim/site/pack/packer/opt/*")
 add("~/.local/share/nvim/site/pack/packer/start/*")
 
-setup("sumneko_lua", {
+setup("lua_ls", {
 	cmd = { "lua-language-server" },
 	settings = {
 		Lua = {
