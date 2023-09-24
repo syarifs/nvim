@@ -24,8 +24,7 @@ local M = {
 	{ "akinsho/flutter-tools.nvim" },
 
 	-- Format
-	{ "nvimdev/guard.nvim" },
-	{ "nvimdev/guard-collection" },
+	{ "stevearc/conform.nvim" },
 
 	-- Completion
 	{ "hrsh7th/nvim-cmp" },
@@ -94,6 +93,10 @@ local M = {
 
 	-- Pretty Diagnostic
 	{ "folke/trouble.nvim" },
+
+	-- Compiler
+	{ "Zeioth/compiler.nvim" },
+	{ "stevearc/overseer.nvim" },
 
 	-- Other
 	{ "rking/ag.vim" },

@@ -28,6 +28,7 @@ local M = {
 	{ "o", "foldmethod", "expr" },
 	{ "o", "fillchars", [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]] },
 	{ "o", "foldexpr", "nvim_treesitter#foldexpr()" },
+	{ "o", "formatexpr", "v:lua.require'conform'.formatexpr()" },
 	{ "wo", "number", true },
 	{ "wo", "relativenumber", true },
 	{ "wo", "cursorline", true },
