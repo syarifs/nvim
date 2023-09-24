@@ -39,11 +39,12 @@ setup("ufo", {
 			winblend = 0,
 		},
 		mappings = {
-			scrollU = "<C-u>",
-			scrollD = "<C-d>",
+			scrollU = "<C-A-u>",
+			scrollD = "<C-A-d>",
 		},
 	},
-	provider_selector = function(_, _)
+	provider_selector = function(_, _, _)
 		return { "treesitter", "indent" }
 	end,
 })
+

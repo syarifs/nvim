@@ -1,8 +1,6 @@
 local setup = require("utils").plugins
-local gheight = vim.api.nvim_list_uis()[1].height
-local gwidth = vim.api.nvim_list_uis()[1].width
-local width = 130
-local height = 130
+local WIDTH_RATIO = .5
+local HEIGHT_RATIO = .8
 
 setup("nvim-tree", {
 	disable_netrw = false,
@@ -41,30 +39,31 @@ setup("nvim-tree", {
 		timeout = 500,
 	},
 	view = {
-		width = width,
-		side = "center",
-		preserve_window_proportions = true,
-		mappings = {
-			custom_only = false,
-			list = {},
-		},
-		adaptive_size = true,
-		centralize_selection = true,
-		number = false,
-		relativenumber = false,
-		signcolumn = "yes",
 		float = {
 			enable = true,
 			quit_on_focus_loss = true,
-			open_win_config = {
-				width = width,
-				height = height,
-				relative = "editor",
-				border = "rounded",
-				col = math.floor((gwidth - width) * 0.5),
-				row = math.floor((gheight - height) * 0.5),
-			},
+			open_win_config = function()
+				local screen_width = vim.opt.columns:get()
+				local screen_heigth = vim.opt.lines:get() - vim.opt.cmdheight:get()
+				local window_width = screen_width * WIDTH_RATIO
+				local window_height = screen_heigth * HEIGHT_RATIO
+        local center_x = (screen_width - window_width) / 2
+        local center_y = ((vim.opt.lines:get() - window_height) / 2)
+                         - vim.opt.cmdheight:get()
+
+				return {
+					border = "rounded",
+					relative = "editor",
+					row = center_y,
+					col = center_x,
+					width = math.floor(window_width),
+					height = math.floor(screen_heigth)
+				}
+			end,
 		},
+		width = function ()
+			return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
+		end
 	},
 	trash = {
 		cmd = "trash",

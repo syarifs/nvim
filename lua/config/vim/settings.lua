@@ -22,7 +22,7 @@ local M = {
 	{ "o", "sidescrolloff", 8 },
 	{ "o", "scrollback", 8 },
 	{ "o", "foldcolumn", "1" },
-	{ "o", "foldlevelstart", -1 },
+	{ "o", "foldlevelstart", 99 },
 	{ "o", "foldlevel", 99 },
 	{ "o", "foldenable", true },
 	{ "o", "foldmethod", "expr" },

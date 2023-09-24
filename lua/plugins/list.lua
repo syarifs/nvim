@@ -1,5 +1,5 @@
 local M = {
-	-- { "savq/paq-nvim" },
+	-- Plugin Manager
 	{ "wbthomason/packer.nvim" },
 
 	-- LSP
@@ -12,12 +12,8 @@ local M = {
 	-- File type
 	{ "nathom/filetype.nvim" },
 
-	-- Prettier
-	{ "jose-elias-alvarez/null-ls.nvim" },
-	{ "MunifTanjim/prettier.nvim" },
-
 	-- Progress Loading
-	{ "j-hui/fidget.nvim" },
+	{ "j-hui/fidget.nvim",                        tag = "legacy" },
 
 	-- Database Support
 	{ "tpope/vim-dadbod" },
@@ -27,24 +23,30 @@ local M = {
 	-- Flutter Support
 	{ "akinsho/flutter-tools.nvim" },
 
+	-- Format
+	{ "nvimdev/guard.nvim" },
+	{ "nvimdev/guard-collection" },
+
 	-- Completion
 	{ "hrsh7th/nvim-cmp" },
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/cmp-buffer" },
 	{ "hrsh7th/cmp-path" },
-	-- { "hrsh7th/cmp-cmdline" },
 	{ "hrsh7th/cmp-nvim-lsp-signature-help" },
 
 	-- Smooth Scrolling
 	{ "karb94/neoscroll.nvim" },
 
+	-- Indent Blankline
+	{ "shellRaining/hlchunk.nvim" },
+
 	-- Snippets
-	{ "L3MON4D3/LuaSnip", run = "make install_jsregexp" },
+	{ "L3MON4D3/LuaSnip",                         run = "make install_jsregexp" },
 	{ "rafamadriz/friendly-snippets" },
 	{ "saadparwaiz1/cmp_luasnip" },
 
 	-- Tagbar
-	{ "preservim/tagbar" },
+	{ "simrat39/symbols-outline.nvim" },
 
 	-- Theming
 	{ "folke/tokyonight.nvim" },
@@ -64,17 +66,13 @@ local M = {
 	{ "kyazdani42/nvim-web-devicons" },
 	{ "kyazdani42/nvim-tree.lua" },
 
-	-- Matlab Support
-	{ "jvirtanen/vim-octave" },
+	-- Autotag
+	{ "windwp/nvim-autopairs" },
+	{ "windwp/nvim-ts-autotag" },
+	{ "HiPhish/rainbow-delimiters.nvim" },
 
 	-- CSV Support
 	{ "chrisbra/csv.vim" },
-
-	-- pair
-	{ "jiangmiao/auto-pairs" },
-	{ "alvan/vim-closetag" },
-	{ "windwp/nvim-ts-autotag" },
-	{ "p00f/nvim-ts-rainbow" },
 
 	-- Shortcut Helper
 	{ "folke/which-key.nvim" },
@@ -100,9 +98,6 @@ local M = {
 	-- Other
 	{ "rking/ag.vim" },
 	{ "akinsho/toggleterm.nvim" },
-
-	-- Live Server
-	{ "barrett-ruth/live-server.nvim", setup = "yarn global add live-server" },
 }
 
 return M

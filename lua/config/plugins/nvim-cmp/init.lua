@@ -13,6 +13,38 @@ local lspkind = require("lspkind")
 local cmp = require("cmp")
 local setup = require("utils").plugins
 
+-- Auto Pairs from nvim-autopairs
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+local handlers = require('nvim-autopairs.completion.handlers')
+
+cmp.event:on(
+	'confirm_done',
+	 cmp_autopairs.on_confirm_done({
+    filetypes = {
+      -- "*" is a alias to all filetypes
+      ["*"] = {
+        ["("] = {
+          kind = {
+            cmp.lsp.CompletionItemKind.Function,
+            cmp.lsp.CompletionItemKind.Method,
+          },
+          handler = handlers["*"]
+        }
+      },
+      lua = {
+        ["("] = {
+          kind = {
+            cmp.lsp.CompletionItemKind.Function,
+            cmp.lsp.CompletionItemKind.Method
+          },
+        }
+      },
+      -- Disable for tex
+      tex = false
+    }
+	})
+)
+
 setup("cmp", {
 	formatting = {
 		format = lspkind.cmp_format({
@@ -106,24 +138,3 @@ setup("cmp", {
 		}),
 	},
 })
-
--- cmp.setup.cmdline('/', { completion = { autocomplete = false },
--- 		sources = {
--- 				{ name = 'buffer', options = { keyword_pattern = [=[[^[:blank:]].*]=] } }
--- 		}
--- })
---
--- cmp.setup.cmdline(':', {
--- 		mapping = cmp.mapping.preset.cmdline(),
--- 		sources = cmp.config.sources({
--- 				{ name = 'path' }
--- 		}, {
--- 					{
--- 							name = 'cmdline',
--- 							option = {
--- 						  keyword_pattern = [=[[^[:blank:]].*]=],
--- 							ignore_cmds = { 'Man', '!' }
--- 					}
--- 				}
--- 		})
--- })

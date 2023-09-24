@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/syarif/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/syarif/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/syarif/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/syarif/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/syarif/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/syarif/.cache/nvim/packer_hererocks/2.1.1692616192/share/lua/5.1/?.lua;/home/syarif/.cache/nvim/packer_hererocks/2.1.1692616192/share/lua/5.1/?/init.lua;/home/syarif/.cache/nvim/packer_hererocks/2.1.1692616192/lib/luarocks/rocks-5.1/?.lua;/home/syarif/.cache/nvim/packer_hererocks/2.1.1692616192/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/syarif/.cache/nvim/packer_hererocks/2.1.1692616192/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -83,11 +83,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/ag.vim",
     url = "https://github.com/rking/ag.vim"
-  },
-  ["auto-pairs"] = {
-    loaded = true,
-    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/auto-pairs",
-    url = "https://github.com/jiangmiao/auto-pairs"
   },
   ["bufferline.nvim"] = {
     loaded = true,
@@ -144,10 +139,10 @@ _G.packer_plugins = {
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["live-server.nvim"] = {
+  ["hlchunk.nvim"] = {
     loaded = true,
-    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/live-server.nvim",
-    url = "https://github.com/barrett-ruth/live-server.nvim"
+    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/hlchunk.nvim",
+    url = "https://github.com/shellRaining/hlchunk.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -173,11 +168,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
     url = "https://github.com/karb94/neoscroll.nvim"
-  },
-  ["null-ls.nvim"] = {
-    loaded = true,
-    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -209,16 +199,6 @@ _G.packer_plugins = {
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
-  ["nvim-ts-autotag"] = {
-    loaded = true,
-    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
-    url = "https://github.com/windwp/nvim-ts-autotag"
-  },
-  ["nvim-ts-rainbow"] = {
-    loaded = true,
-    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
-    url = "https://github.com/p00f/nvim-ts-rainbow"
-  },
   ["nvim-ufo"] = {
     loaded = true,
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/nvim-ufo",
@@ -244,11 +224,6 @@ _G.packer_plugins = {
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
-  ["prettier.nvim"] = {
-    loaded = true,
-    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/prettier.nvim",
-    url = "https://github.com/MunifTanjim/prettier.nvim"
-  },
   ["promise-async"] = {
     loaded = true,
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/promise-async",
@@ -259,10 +234,10 @@ _G.packer_plugins = {
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/rest.nvim",
     url = "https://github.com/NTBBloodbath/rest.nvim"
   },
-  tagbar = {
+  ["symbols-outline.nvim"] = {
     loaded = true,
-    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/tagbar",
-    url = "https://github.com/preservim/tagbar"
+    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
+    url = "https://github.com/simrat39/symbols-outline.nvim"
   },
   ["telescope-media-files.nvim"] = {
     loaded = true,
@@ -299,11 +274,6 @@ _G.packer_plugins = {
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/vim-blade",
     url = "https://github.com/jwalton512/vim-blade"
   },
-  ["vim-closetag"] = {
-    loaded = true,
-    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/vim-closetag",
-    url = "https://github.com/alvan/vim-closetag"
-  },
   ["vim-dadbod"] = {
     loaded = true,
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/vim-dadbod",
@@ -323,11 +293,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/vim-markdown-toc",
     url = "https://github.com/rderik/vim-markdown-toc"
-  },
-  ["vim-octave"] = {
-    loaded = true,
-    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/vim-octave",
-    url = "https://github.com/jvirtanen/vim-octave"
   },
   ["which-key.nvim"] = {
     loaded = true,
