@@ -33,13 +33,11 @@ map("v", "<A-/>", ":CommentToggle<CR>")
 map("n", "ff", ":Telescope find_files<cr>")
 map("n", "fg", ":Telescope live_grep<cr>")
 map("n", "ft", ":Telescope help_tags<cr>")
-map("n", "fm", ":Telescope media_files<cr>")
-map("n", "fa", ":Telescope lsp_code_action<cr>")
 
 -- Fold
 map("n", "<A-h>", ":foldclose<cr>")
 map("n", "<A-l>", ":foldopen<cr>")
 
 -- Terminal
-map("n", "t", ":ToggleTerm direction=float<cr>")
+map("n", "t", ":Lspsaga term_toggle<cr>")
 map("t", "<Esc>", " <C-\\><C-n> :quit<cr>")

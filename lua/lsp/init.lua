@@ -8,7 +8,6 @@ vim.diagnostic.config({
 	},
 })
 vim.o.updatetime = 250
-vim.cmd([[autocmd CursorHold,CursorHoldI * :Lspsaga show_line_diagnostics]])
 vim.cmd([[
   highlight! DiagnosticLineNrError guibg=#51202A guifg=#FF0000 gui=bold
   highlight! DiagnosticLineNrWarn guibg=#51412A guifg=#FFA500 gui=bold

@@ -5,7 +5,7 @@ local M = {
 	-- LSP
 	{ "neovim/nvim-lspconfig" },
 	{ "onsails/lspkind-nvim" },
-	{ "tami5/lspsaga.nvim" },
+	{ "nvimdev/lspsaga.nvim" },
 	{ "nvim-treesitter/nvim-treesitter" },
 	{ "terrortylor/nvim-comment" },
 
@@ -37,7 +37,7 @@ local M = {
 	{ "karb94/neoscroll.nvim" },
 
 	-- Indent Blankline
-	{ "shellRaining/hlchunk.nvim" },
+	{ "lukas-reineke/indent-blankline.nvim" },
 
 	-- Snippets
 	{ "L3MON4D3/LuaSnip",                         run = "make install_jsregexp" },
@@ -91,16 +91,9 @@ local M = {
 	-- Laravel
 	{ "jwalton512/vim-blade" },
 
-	-- Pretty Diagnostic
-	{ "folke/trouble.nvim" },
-
 	-- Compiler
 	{ "Zeioth/compiler.nvim" },
 	{ "stevearc/overseer.nvim" },
-
-	-- Other
-	{ "rking/ag.vim" },
-	{ "akinsho/toggleterm.nvim" },
 }
 
 return M

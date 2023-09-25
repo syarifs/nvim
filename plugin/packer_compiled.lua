@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["ag.vim"] = {
-    loaded = true,
-    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/ag.vim",
-    url = "https://github.com/rking/ag.vim"
-  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -149,10 +144,10 @@ _G.packer_plugins = {
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["hlchunk.nvim"] = {
+  ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/hlchunk.nvim",
-    url = "https://github.com/shellRaining/hlchunk.nvim"
+    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -162,7 +157,7 @@ _G.packer_plugins = {
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
-    url = "https://github.com/tami5/lspsaga.nvim"
+    url = "https://github.com/nvimdev/lspsaga.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -278,11 +273,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/syarif/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["toggleterm.nvim"] = {
-    loaded = true,
-    path = "/home/syarif/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
-    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
