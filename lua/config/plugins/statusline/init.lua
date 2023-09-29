@@ -12,8 +12,14 @@ setup("lualine", {
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = { "branch", "diff", { "diagnostics", sources = { "nvim_diagnostic", "coc" } } },
-		lualine_c = { "filename" },
-		lualine_x = { "encoding", "fileformat", "filetype" },
+		lualine_c = {
+			{
+				require("noice").api.statusline.mode.get,
+				cond = require("noice").api.statusline.mode.has,
+				color = { fg = "#ff9e64" },
+			}, "filename" },
+		lualine_x = { "encoding", "fileformat", "filetype"
+		},
 		lualine_y = { "progress" },
 		lualine_z = { "location" },
 	},

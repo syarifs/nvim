@@ -11,7 +11,6 @@ local M = {
 	{ "o", "termguicolors", true },
 	{ "o", "hidden", true },
 	{ "o", "guifont", "Fira Code:14" },
-	{ "o", "lazyredraw", true },
 	{ "o", "regexpengine", 1 },
 	{ "o", "showmode", false },
 	{ "o", "smartcase", true },

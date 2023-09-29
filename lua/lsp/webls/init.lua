@@ -10,3 +10,7 @@ setup("html", {
 	cmd = { "vscode-html-languageserver", "--stdio" },
 	filetypes = { "html", "blade" },
 })
+
+setup("emmet_ls", {
+	filetypes = { "html", "blade", "scss", "sass", "less", "vue", "javascriptreact", "css", "htmldjango", "svelte" }
+})

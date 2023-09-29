@@ -19,29 +19,29 @@ local handlers = require('nvim-autopairs.completion.handlers')
 
 cmp.event:on(
 	'confirm_done',
-	 cmp_autopairs.on_confirm_done({
-    filetypes = {
-      -- "*" is a alias to all filetypes
-      ["*"] = {
-        ["("] = {
-          kind = {
-            cmp.lsp.CompletionItemKind.Function,
-            cmp.lsp.CompletionItemKind.Method,
-          },
-          handler = handlers["*"]
-        }
-      },
-      lua = {
-        ["("] = {
-          kind = {
-            cmp.lsp.CompletionItemKind.Function,
-            cmp.lsp.CompletionItemKind.Method
-          },
-        }
-      },
-      -- Disable for tex
-      tex = false
-    }
+	cmp_autopairs.on_confirm_done({
+		filetypes = {
+			-- "*" is a alias to all filetypes
+			["*"] = {
+				["("] = {
+					kind = {
+						cmp.lsp.CompletionItemKind.Function,
+						cmp.lsp.CompletionItemKind.Method,
+					},
+					handler = handlers["*"]
+				}
+			},
+			lua = {
+				["("] = {
+					kind = {
+						cmp.lsp.CompletionItemKind.Function,
+						cmp.lsp.CompletionItemKind.Method
+					},
+				}
+			},
+			-- Disable for tex
+			tex = false
+		}
 	})
 )
 
@@ -61,7 +61,7 @@ setup("cmp", {
 		{ name = "nvim_lsp_signature_help" },
 		{ name = "nvim_lsp" },
 		{ name = "vim-dadbod-completion" },
-		{ name = "luasnip", option = { show_autosnippets = true } },
+		{ name = "luasnip",                option = { show_autosnippets = true } },
 	}, {
 		{ name = "buffer" },
 		{ name = "path" },

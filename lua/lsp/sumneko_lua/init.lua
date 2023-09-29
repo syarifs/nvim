@@ -15,8 +15,6 @@ local function add(lib)
 	end
 end
 
-table.insert(library, "${3rd}/luv/library")
-
 -- add runtime
 add("$VIMRUNTIME")
 

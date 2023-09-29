@@ -12,9 +12,6 @@ local M = {
 	-- File type
 	{ "nathom/filetype.nvim" },
 
-	-- Progress Loading
-	{ "j-hui/fidget.nvim",                        tag = "legacy" },
-
 	-- Database Support
 	{ "tpope/vim-dadbod" },
 	{ "kristijanhusak/vim-dadbod-ui" },
@@ -52,6 +49,8 @@ local M = {
 	{ "akinsho/bufferline.nvim" },
 	{ "rcarriga/nvim-notify" },
 	{ "nvim-lualine/lualine.nvim" },
+	{ "folke/noice.nvim" },
+	{ "MunifTanjim/nui.nvim" },
 
 	-- VCS sign
 	{ "tanvirtin/vgit.nvim" },

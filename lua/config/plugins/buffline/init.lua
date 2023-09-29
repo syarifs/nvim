@@ -2,14 +2,6 @@ local setup = require("utils").plugins
 
 setup("bufferline", {
 	options = {
-		offsets = {
-			{
-				filetype = "NvimTree",
-				text = "File Explorer",
-				highlight = "Directory",
-				text_align = "left",
-			},
-		},
 		numbers = "ordinal",
 		close_command = "bdelete! %d",
 		right_mouse_command = "bdelete! %d",
