@@ -1,4 +1,4 @@
-local M = {
+return {
 	-- Vim Config
 	{ "bo", "expandtab", true },
 	{ "o", "background", "dark" },
@@ -39,5 +39,3 @@ local M = {
 	{ "o", "incsearch", false },
 	{ "wo", "signcolumn", "yes" },
 }
-
-return M
