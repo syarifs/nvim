@@ -1,9 +1,7 @@
 return {
 	"akinsho/bufferline.nvim",
 	config = function()
-		local setup = require("utils").plugins
-
-		setup("bufferline", {
+		require("bufferline").setup({
 			options = {
 				numbers = "ordinal",
 				close_command = "bdelete! %d",

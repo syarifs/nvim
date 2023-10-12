@@ -1,9 +1,7 @@
 return {
 	"nvim-lualine/lualine.nvim",
 	config = function()
-		local setup = require("utils").plugins
-
-		setup("lualine", {
+		require("lualine").setup({
 			options = {
 				icons_enabled = true,
 				theme = "tokyonight",

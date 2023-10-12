@@ -1,9 +1,6 @@
 local opts = { silent = true, noremap = true }
 
-local function on_attach(_, bufnr)
-	-- Option
-	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
-
+return function(_, bufnr)
 	local function map(mode, l, r, opt)
 		opts = opt or {}
 		opts.silent = true
@@ -22,5 +19,3 @@ local function on_attach(_, bufnr)
 	map("n", "gdw", "<cmd>Lspsaga show_workspace_diagnostics<cr>", opts)
 	map("n", "gtd", "<cmd>lua vim.lsp.buf.definition()<cr>", opts)
 end
-
-return on_attach

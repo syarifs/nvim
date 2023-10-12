@@ -1,6 +1,7 @@
 return {
 	-- Vim Config
 	{ "bo", "expandtab", true },
+	{ "bo", "swapfile", false },
 	{ "o", "background", "dark" },
 	{ "o", "smartindent", true },
 	{ "o", "shiftwidth", 2 },
@@ -21,6 +22,7 @@ return {
 	{ "o", "sidescrolloff", 8 },
 	{ "o", "scrollback", 8 },
 	{ "o", "foldcolumn", "1" },
+	{ "o", "smartindent", true },
 	{ "o", "foldlevelstart", 99 },
 	{ "o", "foldlevel", 99 },
 	{ "o", "foldenable", true },

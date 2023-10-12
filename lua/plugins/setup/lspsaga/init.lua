@@ -1,8 +1,7 @@
 return {
 	"nvimdev/lspsaga.nvim",
 	config = function()
-		local setup = require("utils").plugins
-		setup("lspsaga", {
+		require("lspsaga").setup({
 
 			symbols_in_winbar = {
 				enabled = true

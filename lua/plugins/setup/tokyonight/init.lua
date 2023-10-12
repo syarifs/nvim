@@ -1,9 +1,7 @@
 return {
 	"folke/tokyonight.nvim",
 	config = function()
-		local setup = require("utils").plugins
-
-		setup("tokyonight", {
+		require("tokyonight").setup({
 			style = "night",
 			styles = {
 				comments = { italic = true },

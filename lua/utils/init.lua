@@ -6,17 +6,17 @@ capabilities.textDocument.foldingRange = {
 	lineFoldingOnly = true,
 }
 
-M.plugins = function(modul, config)
-	require(modul)["setup"](config)
-end
-
 M.lsp = function(lang, config)
 	local mod = require("lspconfig")[lang]["setup"]
 	if type(config) ~= "table" then
 		config = {}
 	end
 	config["capabilities"] = capabilities
-	config["on_attach"] = require("lsp.key")
+
+	if type(config["on_attach"]) ~= "table" then
+		config["on_attach"] = require("lsp.key")
+	end
+
 	if type(mod) == "table" then
 		mod = config
 	else
@@ -26,10 +26,6 @@ end
 
 M.options = function(scope, key, value)
 	vim[scope][key] = value
-end
-
-M.autocmd = function(event, target, command)
-	vim.api.nvim_exec("au " .. event .. " " .. target .. " silent " .. command, false)
 end
 
 M.map = function(mode, lhs, rhs, opts)

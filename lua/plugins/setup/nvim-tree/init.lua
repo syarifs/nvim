@@ -4,11 +4,10 @@ return {
 		"nvim-tree/nvim-web-devicons"
 	},
 	config = function()
-		local setup = require("utils").plugins
 		local WIDTH_RATIO = .5
 		local HEIGHT_RATIO = .8
 
-		setup("nvim-tree", {
+		require("nvim-tree").setup({
 			disable_netrw = false,
 			hijack_netrw = true,
 			auto_reload_on_write = true,

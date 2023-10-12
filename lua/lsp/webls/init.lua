@@ -1,16 +1,22 @@
 local setup = require("utils").lsp
 
-setup("jsonls", {
-	cmd = { "vscode-json-languageserver", "--stdio" },
-})
-setup("cssls", {
-	cmd = { "vscode-css-languageserver", "--stdio" },
-})
+setup("jsonls")
+setup("cssls")
 setup("html", {
-	cmd = { "vscode-html-languageserver", "--stdio" },
 	filetypes = { "html", "blade" },
 })
 
 setup("emmet_ls", {
-	filetypes = { "html", "blade", "scss", "sass", "less", "vue", "javascriptreact", "css", "htmldjango", "svelte" }
+	filetypes = { "html", "blade", "vue", "javascriptreact", "htmldjango", "svelte" }
+})
+
+setup("eslint", {
+	on_attach = function(_, bufnr)
+		local key = require('lsp.key')
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			buffer = bufnr,
+			command = "EslintFixAll",
+		})
+		key(_, bufnr)
+	end,
 })

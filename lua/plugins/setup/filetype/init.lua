@@ -1,9 +1,7 @@
 return {
 	"nathom/filetype.nvim",
 	config = function()
-		local setup = require("utils").plugins
-
-		setup("filetype", {
+		require("filetype").setup({
 			overrides = {
 				extensions = {
 					scss = "scss",

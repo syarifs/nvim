@@ -5,9 +5,7 @@ return {
 		"rcarriga/nvim-notify"
 	},
 	config = function()
-		local setup = require("utils").plugins
-
-		setup("noice", {
+		require("noice").setup({
 			lsp = {
 				-- override markdown rendering so that **cmp** and other plugins use **Treesitter**
 				override = {

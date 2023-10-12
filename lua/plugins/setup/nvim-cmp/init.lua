@@ -22,7 +22,6 @@ return {
 		local luasnip = require("luasnip")
 		local lspkind = require("lspkind")
 		local cmp = require("cmp")
-		local setup = require("utils").plugins
 
 		-- Auto Pairs from nvim-autopairs
 		local cmp_autopairs = require('nvim-autopairs.completion.cmp')
@@ -56,7 +55,7 @@ return {
 			})
 		)
 
-		setup("cmp", {
+		require("cmp").setup({
 			formatting = {
 				format = lspkind.cmp_format({
 					with_text = true,

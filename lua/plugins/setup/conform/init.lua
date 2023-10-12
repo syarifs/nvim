@@ -1,9 +1,7 @@
 return {
 	"stevearc/conform.nvim",
 	config = function()
-		local setup = require("utils").plugins
-
-		setup("conform", {
+		require("conform").setup({
 			formatters = {
 				blade = {
 					command = "blade-formatter",
@@ -13,7 +11,13 @@ return {
 			},
 
 			formatters_by_ft = {
-				blade = { "blade" }
+				blade = { "blade" },
+				javascript = { "prettier" },
+				json = { "prettier" },
+				css = { "prettier" },
+				html = { "prettier" },
+				yaml = { "yamlfmt" },
+				go = { "gofmt" },
 			},
 
 			format_on_save = {

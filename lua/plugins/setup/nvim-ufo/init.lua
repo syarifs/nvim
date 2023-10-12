@@ -4,8 +4,6 @@ return {
 		"kevinhwang91/promise-async"
 	},
 	config = function()
-		local setup = require("utils").plugins
-
 		local handler = function(virtText, lnum, endLnum, width, truncate)
 			local newVirtText = {}
 			local suffix = ("  %d "):format(endLnum - lnum)
@@ -34,7 +32,7 @@ return {
 			return newVirtText
 		end
 
-		setup("ufo", {
+		require("ufo").setup({
 			open_fold_hl_timeout = 150,
 			fold_virt_text_handler = handler,
 			close_fold_kinds = { "imports", "comment" },
@@ -55,4 +53,3 @@ return {
 		})
 	end
 }
-

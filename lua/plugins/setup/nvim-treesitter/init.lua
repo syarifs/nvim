@@ -1,7 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	config = function()
-		local setup = require("utils").plugins
 		local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 
 		-- laravel blade parser
@@ -14,7 +13,7 @@ return {
 			filetype = "blade"
 		}
 
-		setup("nvim-treesitter.configs", {
+		require("nvim-treesitter.configs").setup({
 			highlight = {
 				enable = true,
 			},
@@ -35,4 +34,3 @@ return {
 		})
 	end
 }
-
