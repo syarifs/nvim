@@ -21,19 +21,21 @@ return {
 	{ "o", "scrolloff", 8 },
 	{ "o", "sidescrolloff", 8 },
 	{ "o", "scrollback", 8 },
+	{ "o", "statuscolumn", "%C %l %s" },
 	{ "o", "foldcolumn", "1" },
 	{ "o", "smartindent", true },
 	{ "o", "foldlevelstart", 99 },
 	{ "o", "foldlevel", 99 },
 	{ "o", "foldenable", true },
 	{ "o", "foldmethod", "expr" },
-	{ "o", "fillchars", [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]] },
+	{ "o", "fillchars", [[eob: ,fold: ,foldopen:,foldsep:▏,foldclose:]] },
 	{ "o", "foldexpr", "nvim_treesitter#foldexpr()" },
 	{ "o", "formatexpr", "v:lua.require'conform'.formatexpr()" },
 	{ "wo", "number", true },
 	{ "wo", "relativenumber", true },
 	{ "wo", "cursorline", true },
 
+	{ "g", "mapleader", " " },
 	{ "g", "did_load_filetypes", true },
 
 	-- blame line

@@ -1,6 +1,5 @@
 local cmd = vim.cmd
 local autocmd = vim.api.nvim_create_autocmd
-local opt = require("utils").options
 local vim_settings = require("config.vim.settings")
 
 -- activate filetype and indentation
@@ -24,5 +23,5 @@ autocmd("TermOpen", {
 
 -- load settings table
 for _, value in ipairs(vim_settings) do
-	opt(value[1], value[2], value[3])
+	vim[value[1]][value[2]] = value[3]
 end

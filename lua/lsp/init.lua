@@ -7,6 +7,7 @@ vim.diagnostic.config({
 		source = "if_many",
 	},
 })
+
 vim.o.updatetime = 250
 vim.cmd([[
   highlight! DiagnosticLineNrError guibg=#51202A guifg=#FF0000 gui=bold

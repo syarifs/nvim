@@ -1,4 +1,4 @@
-local setup = require("utils").lsp
+local setup = require("lsp.setup")
 local util = require("lspconfig/util")
 
 local lastRootPath = nil

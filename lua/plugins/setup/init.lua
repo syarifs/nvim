@@ -5,7 +5,11 @@ return {
 			require('neoscroll').setup()
 		end
 	},
+	{
+		"folke/which-key.nvim",
+		config = function()
+			require("which-key").setup()
+		end
+	},
 	"rafamadriz/friendly-snippets",
-	"folke/which-key.nvim",
-	"terrortylor/nvim-comment"
 }

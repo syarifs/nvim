@@ -1,5 +1,8 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	dependencies = {
+		'JoosepAlviste/nvim-ts-context-commentstring',
+	},
 	config = function()
 		local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 
@@ -29,7 +32,11 @@ return {
 				extended_mode = true,
 				max_file_lines = nil,
 			},
-			ensure_installed = { "http", "json", "lua", "go", "gomod", "php", "html", "blade", "javascript" },
+			context_commentstring = {
+				enable = true,
+			},
+			ensure_installed = { "http", "json", "lua", "go", "gomod", "php", "html", "blade", "javascript", "markdown",
+				"markdown_inline" },
 			sync_install = true,
 		})
 	end

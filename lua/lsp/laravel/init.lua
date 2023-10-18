@@ -1,5 +1,5 @@
 local configs = require("lspconfig.configs")
-local setup = require("utils").lsp
+local setup = require("lsp.setup")
 local util = require("lspconfig.util")
 
 -- Configure it

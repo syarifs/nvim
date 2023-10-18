@@ -1,4 +1,4 @@
-local setup = require("utils").lsp
+local setup = require("lsp.setup")
 
 setup("pylsp")
 setup("intelephense")
