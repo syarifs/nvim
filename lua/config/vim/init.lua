@@ -21,7 +21,13 @@ autocmd("TermOpen", {
 	end
 })
 
--- load settings table
+-- FileType
+vim.filetype.add({
+	pattern = {
+		[".*.blade.php"] = "blade"
+	}
+})
+
 for _, value in ipairs(vim_settings) do
-	vim[value[1]][value[2]] = value[3]
+vim[value[1]][value[2]] = value[3]
 end
