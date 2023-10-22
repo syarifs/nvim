@@ -2,17 +2,15 @@ local setup = require("lsp.setup")
 
 setup("jsonls")
 setup("cssls")
-setup("html", {
-	filetypes = { "html", "blade" },
-})
+setup("html")
 
 setup("emmet_ls", {
-	filetypes = { "html", "blade", "vue", "javascriptreact", "htmldjango", "svelte" }
+	filetypes = { "html", "blade", "vue", "javascriptreact", "htmldjango", "svelte" },
 })
 
 setup("eslint", {
 	on_attach = function(_, bufnr)
-		local key = require('lsp.key')
+		local key = require("lsp.key")
 		vim.api.nvim_create_autocmd("BufWritePre", {
 			buffer = bufnr,
 			command = "EslintFixAll",

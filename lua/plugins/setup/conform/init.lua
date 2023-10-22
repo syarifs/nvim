@@ -7,23 +7,31 @@ return {
 					command = "blade-formatter",
 					stdin = false,
 					args = { "--write", "$FILENAME" },
-				}
+				},
 			},
 
 			formatters_by_ft = {
+				lua = { "stylua" },
 				blade = { "blade" },
 				javascript = { "prettier" },
 				json = { "prettier" },
 				css = { "prettier" },
 				html = { "prettier" },
-				yaml = { "yamlfmt" },
-				go = { "gofmt" },
+				yaml = { "prettier" },
+				scss = { "prettier" },
+				typescript = { "prettier" },
+				go = { "gofumpt" },
+				java = { "google-java-format" },
+				python = { "isort", "black" },
+				markdown = { "mdformat" },
+				sql = { "sql_formatter" },
+				sh = { "shellharden" },
 			},
 
 			format_on_save = {
 				lsp_fallback = true,
-				timeout_ms = 1500
+				timeout_ms = 1500,
 			},
 		})
-	end
+	end,
 }
